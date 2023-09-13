@@ -15,7 +15,7 @@ const MovieCard = ({movie, addMovie, removeMovie, list}) =>{
 
     return <div className="movie-card">
         <div>
-            <img src="https://image.tmdb.org/t/p/original${movie.poster_path}" alt="movie img"/>
+            <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt="movie img"/>
             <h3>{movie.original_title}</h3>
         </div>
         {button}

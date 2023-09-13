@@ -1,7 +1,7 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-const Watchlist = (list, removeMovie) =>{
+const Watchlist = ({list, removeMovie}) =>{
 
     const movieDisplay = list.map((movie, index) =>{
         return (

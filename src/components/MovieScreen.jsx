@@ -2,11 +2,11 @@ import React from "react";
 import MovieCard from "./MovieCard";
 const MovieScreen = ({addMovie, movieList, page, setPage, list, removeMovie }) => {
   const decrement = () => {
-    setPage = page - 1;
+    setPage(page - 1);
   };
 
   const increment = () => {
-    setPage = page + 1;
+    setPage(page + 1);
   };
 
   const movieDisplay = movieList.map((movie, index) => {
