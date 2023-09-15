@@ -1,8 +1,12 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 const MovieScreen = ({addMovie, movieList, page, setPage, list, removeMovie }) => {
-  const decrement = () => {
-    setPage(page - 1);
+  const decrement = ({page}) => {
+    if(page > 1){
+      setPage(page-1)
+    }else{
+      alert("you have reached the first page no previous one.")
+    }
   };
 
   const increment = () => {
@@ -24,7 +28,7 @@ const MovieScreen = ({addMovie, movieList, page, setPage, list, removeMovie }) =
       <h1>Hyrums's Movie Theater</h1>
       <h3>Add a movie to your watchlist😎</h3>
       <div className="btn-container">
-        <button onClick={page !== 1 && decrement}>Previous</button>
+        <button onClick={decrement}>Previous</button>
         <button onClick={increment}>Next</button>
       </div>
       <div className="movie-container">{movieDisplay}</div>
